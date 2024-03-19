@@ -2,7 +2,7 @@ import express, { Express, Request, Response, Application } from "express";
 import dotenv from "dotenv";
 
 // routes
-import user from "./routes/users";
+import userRoutes from "./routes/users";
 
 //For env File
 dotenv.config();
@@ -13,7 +13,7 @@ const bodyParser = require("body-parser");
 
 app.use(cors());
 app.use(express.json());
-app.use("/user", user);
+app.use("/user", userRoutes);
 
 const port = process.env.PORT || 8000;
 
