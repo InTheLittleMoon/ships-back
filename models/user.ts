@@ -6,7 +6,17 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  // userMasterKey: {
+  credits: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  shipsOwned: {
+    type: Number,
+    required: true,
+    default: 0,
+  },
+  // userAPIKey: {
   //   type: String,
   //   required: true,
   //   unique: true,
